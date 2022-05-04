@@ -1,0 +1,46 @@
+@use '../base/resets'as *;
+@use '../base/typography'as *;
+@use '../base/colors'as *;
+@use '../base/breakpoints'as *;
+
+#twitter-references-section {
+    padding: 80px 40px;
+    text-align: center;
+
+    .fa-twitter {
+        font-size: 50px;
+        color: $gray;
+    }
+
+    .twitter-references-swiper-container {
+        width: 100%;
+        max-width: 800px;
+        margin: 40px auto;
+
+        .twitter-references-item {
+            background-color: $white;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+
+
+            .twitter-references-p {
+                font-size: 19px;
+            }
+
+            .profile {
+                margin-top: 30px;
+                display: flex;
+                justify-content: center;
+                column-gap: 15px;
+
+                .profile-img {
+                    img {
+                        max-width: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+}

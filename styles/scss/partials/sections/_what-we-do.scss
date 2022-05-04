@@ -1,0 +1,121 @@
+@use '../base/resets'as *;
+@use '../base/typography'as *;
+@use '../base/colors'as *;
+@use '../base/breakpoints'as *;
+
+#what-we-do-section {
+    text-align: center;
+    padding: 80px 200px;
+
+    .what-we-do-title {
+        font-weight: map-get($font-weight, "light");
+        font-size: 35px;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 3px;
+            background-color: $dark-violet;
+            margin: 15px auto;
+        }
+    }
+
+    .what-we-do-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        margin-top: 50px;
+
+        .what-we-do-item {
+            background-color: $white;
+            padding: 20px;
+
+            img {
+                width: 150px;
+            }
+
+            .what-we-do-item-title {
+                font-size: 18px;
+                margin-top: 30px;
+            }
+
+            .what-we-do-item-p {
+                font-size: 15px;
+                margin-top: 10px;
+            }
+
+            &:hover {
+
+                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+    }
+
+    .show-more {
+        text-align: center;
+        margin-top: 50px;
+
+        a {
+            color: $blue;
+            font-size: 18px;
+            font-weight: map-get($font-weight, "bold");
+            margin-top: 100px;
+
+            &::after {
+                content: "";
+                background-color: $blue;
+                width: 100px;
+                height: 3px;
+                display: block;
+                margin: 5px auto;
+            }
+        }
+    }
+}
+
+
+@include large-device {
+    #what-we-do-section {
+        text-align: center;
+        padding: 80px 100px;
+    }
+}
+
+@include laptop {
+    #what-we-do-section {
+        text-align: center;
+        padding: 80px 80px;
+    }
+}
+
+@include tablet {
+    #what-we-do-section {
+        text-align: center;
+        padding: 80px 40px;
+
+        .what-we-do-container {
+            .what-we-do-item {
+                background-color: $white;
+                padding: 20px;
+
+                img {
+                    width: 100px;
+                }
+            }
+        }
+
+    }
+}
+
+@include mobile {
+    #what-we-do-section {
+        text-align: center;
+
+        .what-we-do-container {
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+        }
+    }
+}

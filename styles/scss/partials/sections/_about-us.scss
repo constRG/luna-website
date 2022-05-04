@@ -1,0 +1,87 @@
+@use '../base/resets'as *;
+@use '../base/typography'as *;
+@use '../base/colors'as *;
+@use '../base/breakpoints'as *;
+
+#about-us-section {
+    width: 100%;
+
+    .about-us-container-1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: 80px 200px;
+
+        .about-us-title {
+            font-weight: map-get($font-weight, "light");
+            font-size: 35px;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 70px;
+                height: 3px;
+                background-color: $dark-violet;
+                margin-top: 10px;
+            }
+        }
+
+        .about-us-p {
+            font-weight: map-get($font-weight, "regular");
+            text-align: justify;
+        }
+    }
+
+    .about-us-container-2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@include large-device {
+    #about-us-section {
+        .about-us-container-1 {
+            padding: 80px 100px;
+        }
+    }
+}
+
+@include laptop {
+    #about-us-section {
+        .about-us-container-1 {
+            padding: 80px 80px;
+        }
+    }
+}
+
+@include tablet {
+    #about-us-section {
+        .about-us-container-1 {
+            padding: 80px 40px;
+        }
+
+        .about-us-container-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@include mobile {
+    #about-us-section {
+        .about-us-container-1 {
+            grid-template-columns: 1fr;
+
+            .about-us-p {
+                margin-top: 30px;
+            }
+        }
+
+
+        .about-us-container-2 {
+            grid-template-columns: 1fr;
+        }
+    }
+}

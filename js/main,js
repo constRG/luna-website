@@ -1,0 +1,25 @@
+// ACTIVE HEADER
+window.addEventListener('scroll', () => {
+    const navHeader = document.querySelector('.nav-header')
+    navHeader.classList.toggle('active-nav-header', scrollY > 0)
+})
+
+
+// ACTIVE NAV MENU LIST
+const hamburgerMenuBtn = document.querySelector('#hamburger-menu-btn')
+const navMenuTitle = document.querySelector('.nav-menu-title')
+const navMenuList = document.querySelector('.nav-menu-list')
+hamburgerMenuBtn.addEventListener('click', () => {
+    navMenuTitle.classList.toggle('active-nav-menu-title')
+    hamburgerMenuBtn.classList.toggle('active-hamburger-menu-btn')
+    navMenuList.classList.toggle('active-nav-menu-list')
+})
+
+document.querySelectorAll('.nav-menu-list').forEach(n => n.addEventListener('click', () => {
+    navMenuTitle.classList.remove('active-nav-menu-title')
+    hamburgerMenuBtn.classList.remove('active-hamburger-menu-btn')
+    navMenuList.classList.remove('active-nav-menu-list')
+}))
+
+
+
