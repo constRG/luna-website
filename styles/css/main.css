@@ -157,7 +157,7 @@ p {
   }
 }
 footer {
-  background-image: url("/assets/images/luna-background-image.jpg");
+  background-image: url("/luna-website/assets/images/luna-background-image.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: none;
@@ -242,7 +242,7 @@ footer .footer-container-2 .designer-and-developer {
   }
 }
 #hero-section {
-  background-image: url("/assets/images/luna-background-image.jpg");
+  background-image: url("/luna-website/assets/images/luna-background-image.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: none;
@@ -467,7 +467,7 @@ footer .footer-container-2 .designer-and-developer {
   }
 }
 #portfolio-section {
-  background-image: url("/assets/images/luna-background-image.jpg");
+  background-image: url("/luna-website/assets/images/luna-background-image.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: none;
